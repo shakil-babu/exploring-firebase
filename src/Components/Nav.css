@@ -50,3 +50,23 @@ nav h3{
     border-radius: 50%;
     border:4px solid #9da5ab
 }
+
+@media screen and (max-width:768px){
+    nav{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:418px){
+    .info p{
+        font-size: 8px;
+        margin-top: 15px;
+    }
+    .img{
+        height: 25px;
+        width: 25px;
+        margin-top: 5px;
+    }
+    .info button{
+        font-size: 8px;
+    }
+}
