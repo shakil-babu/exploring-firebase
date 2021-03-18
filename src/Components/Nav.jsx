@@ -1,7 +1,6 @@
 import React from 'react'
 import './Nav.css';
-const Nav = ({signIn, user, signOut}) => {
-    const {isLogged, name, email , photo} = user ;
+const Nav = ({signOut, userDetails}) => {
     return (
         <>
           <nav>
@@ -13,10 +12,8 @@ const Nav = ({signIn, user, signOut}) => {
                     <a href="">Products</a>
                 </div>
                 <div className="info">
-                {isLogged && <p>Welcome, {name}</p> }
-                    {isLogged && <img className='img' src={photo} alt=""/> }
-                    {isLogged ? <button onClick={signOut}>Sign out</button> : <button onClick={signIn}>Sign in</button>}
-                    
+                <p>Hey welcome, {userDetails.email}</p>
+                <button onClick={signOut}>Sign out</button>
                 </div>
             </nav>   
         </>
